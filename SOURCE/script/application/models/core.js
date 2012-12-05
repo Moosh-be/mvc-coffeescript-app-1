@@ -12,9 +12,11 @@ define(["jquery", "application/controllers/loading", "application/views/loadingS
       this.loadingScr = new loadingScreen($("#loading"));
       this.loadingCtrl.setView(this.loadingScr);
       this.loadingCtrl.load();
+      console.log("init core player");
       this.playerCtrl = new playerController();
       this.playerScr = new playerScreen($('#player'));
-      return this.playerCtrl.setView(this.playerScr);
+      this.playerCtrl.setView(this.playerScr);
+      return console.log("init core done");
     };
 
     return Core;

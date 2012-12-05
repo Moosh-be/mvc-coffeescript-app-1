@@ -1,16 +1,5 @@
-define ["jquery"], ($)->
-  class loadingController
-    constructor:()->
-      console.log "loading Controller"
-
+define ["jquery", "application/controllers/baseController"], ($, baseController)->
+  class loadingController extends baseController
     load: ->
-      console.log "load loading"
-      @view.show()
-
-    unload: ()->
-      console.log "unload loading"
-      @view.hide()
-
-    setView: (@view)->
-      console.log "set view"
-            
+      console.log "delegate load to super"
+      super()
